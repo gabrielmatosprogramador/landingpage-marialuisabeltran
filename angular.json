@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {"landing": {"projectType": "application", "root": "", "sourceRoot": "src", "architect": {
+    "build": {"builder": "@angular/build:application", "options": {"outputPath": "dist/landing", "index": "src/index.html", "browser": "src/main.ts", "tsConfig": "tsconfig.app.json", "inlineStyleLanguage": "scss", "assets": [{"glob": "**/*", "input": "public"}], "styles": ["src/styles.scss"]}, "configurations": {"production": {"budgets": [{"type": "initial", "maximumWarning": "500kB", "maximumError": "1MB"}, {"type": "anyComponentStyle", "maximumWarning": "15kB", "maximumError": "20kB"}], "outputHashing": "all"}, "development": {"optimization": false, "extractLicenses": false, "sourceMap": true}}, "defaultConfiguration": "production"},
+    "serve": {"builder": "@angular/build:dev-server", "configurations": {"production": {"buildTarget": "landing:build:production"}, "development": {"buildTarget": "landing:build:development"}}, "defaultConfiguration": "development"},
+    "test": {"builder": "@angular/build:unit-test", "options": {"tsConfig": "tsconfig.spec.json", "runner": "vitest"}}
+  }
+}
+},
+"cli": {
+"analytics": "03f509b5-de7f-4142-873b-751ff695dae9"
+}
+}
