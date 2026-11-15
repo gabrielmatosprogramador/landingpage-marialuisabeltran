@@ -26,7 +26,6 @@ Saída estática em `dist/landing/browser/`. Sirva essa pasta com um servidor HT
 - `src/app/app.ts`: contato, objetivos, planos e perguntas frequentes.
 - `src/app/app.html`: estrutura semântica e textos da página.
 - `src/app/app.scss` e `src/styles.scss`: identidade visual, responsividade e acessibilidade.
-- WhatsApp: `5551996540402`; Instagram: `@marialuisabeltran.nutri`.
 - Os planos não exibem preços. Durações do material: Silver 30 dias, Gold 90 dias e Platinum 180 dias. Valores e condições são tratados no contato.
 - Não foram inventados depoimentos, resultados, CRN, endereços ou promessas clínicas. Confirme os dados profissionais e as condições comerciais antes de qualquer publicação futura.
 
