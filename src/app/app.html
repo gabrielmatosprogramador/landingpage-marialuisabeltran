@@ -1,7 +1,9 @@
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="header">
   <a class="brand" href="#inicio" (click)="closeMenu()">
-    <img src="assets/Logo_nome.png" width="448" height="192" alt="Maria Luísa Beltran, início">
+    <span class="brand-mark">
+      <img src="assets/Logo_nome.png" width="448" height="192" alt="Maria Luísa Beltran, início">
+    </span>
   </a>
   <button class="menu-toggle" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-controls="navigation">{{ menuOpen() ? 'Fechar' : 'Menu' }} <span aria-hidden="true">{{ menuOpen() ? '×' : '☰' }}</span></button>
   <nav id="navigation" [class.open]="menuOpen()" aria-label="Navegação principal"><a href="#sobre" (click)="closeMenu()">Sobre mim</a><a href="#acompanhamento" (click)="closeMenu()">Acompanhamento</a><a href="#planos" (click)="closeMenu()">Planos</a><a class="nav-contact" (click)="closeMenu()" [href]="whatsapp" target="_blank" rel="noopener noreferrer">Vamos conversar <span aria-hidden="true">↗</span></a></nav>
@@ -14,7 +16,10 @@
   </section>
   <div class="intro-strip"><span>Alimentação possível.</span><i aria-hidden="true">✳</i><span>Cuidado individualizado.</span><i aria-hidden="true">✳</i><span>Hábitos que ficam.</span></div>
   <section class="about section" id="sobre" aria-labelledby="about-title">
-    <div class="about-photo"><img src="assets/maria-sobre.jpg" alt="Maria Luísa sorrindo durante um momento de conversa à mesa" width="1920" height="1080" loading="lazy"><span class="photo-caption">Ciência, acolhimento e vida real.</span></div>
+    <div class="about-photo">
+      <img src="assets/maria-sobre.jpg" alt="Maria Luísa sorrindo durante um momento de conversa à mesa" width="1920" height="1080" loading="lazy">
+      <span class="photo-caption">Ciência, acolhimento e vida real.</span>
+    </div>
     <div class="about-copy"><p class="eyebrow">PRAZER, MARIA LUÍSA</p><h2 id="about-title">Antes de falar sobre<br>comida, vamos falar<br><em>sobre você?</em></h2><p>Sou nutricionista formada pela Universidade Federal do Rio Grande do Sul (UFRGS) e acredito em um cuidado que começa com uma boa conversa.</p><p>Meu trabalho é entender a sua realidade e construir, junto com você, um caminho para uma alimentação que respeite suas preferências, sua rotina e seus objetivos.</p><p class="about-highlight">Aqui, você encontra escuta empática e um plano pensado para a sua vida.</p><a class="text-link" [href]="instagram" target="_blank" rel="noopener noreferrer">Me acompanhe no Instagram <span aria-hidden="true">↗</span></a></div>
   </section>
   <section class="goals section" aria-labelledby="goals-title"><div class="section-heading"><div><p class="eyebrow">SEU MOMENTO, SEU OBJETIVO</p><h2 id="goals-title">O cuidado se adapta<br><em>ao que você busca.</em></h2></div><p>Atendimento para adolescentes e adultos.<br>Cada história pede um caminho próprio.</p></div><div class="goals-grid">@for (goal of goals; track goal.number) {<article class="goal"><span class="number">{{goal.number}}</span><h3>{{goal.title}}</h3><p>{{goal.description}}</p></article>}</div></section>
@@ -37,10 +42,25 @@
             }
           </ul>
           <div class="plan-prices">
-            <p class="plan-price"><strong>{{ plan.price }}</strong>@if (plan.pricePeriod) {<span>{{ plan.pricePeriod }}</span>}</p>
-            @if (plan.cashPrice) {
-              <p class="plan-cash-price">{{ plan.cashPrice }} à vista</p>
-            }
+            <div class="plan-price-current">
+              <p class="plan-price-label">Até 31/12/2026</p>
+              <p class="plan-price">
+                <strong>{{ plan.cashPrice ?? plan.price }}</strong>
+                <span>{{ plan.cashPrice ? 'à vista' : plan.pricePeriod }}</span>
+              </p>
+              @if (plan.cashPrice) {
+                <p class="plan-regular-price">Valor regular de {{ plan.price }}</p>
+              }
+            </div>
+            <div class="plan-price-future">
+              <p class="plan-price-label">Proposta para 2027</p>
+              @if (plan.cashPrice2027) {
+                <p>{{ plan.cashPrice2027 }} à vista</p>
+                <p>Valor regular de {{ plan.price2027 }}</p>
+              } @else {
+                <p>{{ plan.price2027 }}{{ plan.pricePeriod }}</p>
+              }
+            </div>
           </div>
           <a class="button" [href]="planContact(plan.name)" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Conversar sobre o plano ' + plan.name">Quero saber mais <span aria-hidden="true">↗</span></a>
         </article>
@@ -53,7 +73,9 @@
 </main>
 <footer class="footer">
   <a class="brand footer-brand" href="#inicio">
-    <img src="assets/Logo_nome.png" width="448" height="192" alt="Maria Luísa Beltran, início">
+    <span class="brand-mark">
+      <img src="assets/Logo_nome.png" width="448" height="192" alt="Maria Luísa Beltran, início">
+    </span>
   </a>
   <p>Nutrição com ciência, escuta e acolhimento.</p>
   <a [href]="instagram" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
