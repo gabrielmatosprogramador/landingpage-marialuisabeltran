@@ -3,5 +3,5 @@
 /.angular
 /out-tsc
 /.npm-cache
-/reference/extracted
+/reference/
 *.log
