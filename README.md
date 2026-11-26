@@ -1,6 +1,6 @@
 # Maria Luísa Beltran — landing page
 
-Landing page em português, implementada em Angular standalone e SCSS. Entrega local; sem publicação, backend, coleta de dados ou serviços externos de analytics. Fotos e ilustração foram extraídas do documento fornecido em `reference/`; apenas os assets usados estão em `public/assets/`.
+Landing page em português, implementada em Angular standalone e SCSS. Entrega local; sem publicação, backend, coleta de dados ou serviços externos de analytics. A paleta e as fotos seguem o PDF em `reference/`. O logo e o favicon usam a arte de `reference/Logo_nome.png`.
 
 ## Executar
 
@@ -26,11 +26,9 @@ Saída estática em `dist/landing/browser/`. Sirva essa pasta com um servidor HT
 - `src/app/app.ts`: contato, objetivos, planos e perguntas frequentes.
 - `src/app/app.html`: estrutura semântica e textos da página.
 - `src/app/app.scss` e `src/styles.scss`: identidade visual, responsividade e acessibilidade.
-- Os planos não exibem preços. Durações do material: Silver 30 dias, Gold 90 dias e Platinum 180 dias. Valores e condições são tratados no contato.
+- Os planos exibem os preços da coluna “Valor atual” da imagem do WhatsApp em `reference/`. Durações do material: Silver 30 dias, Gold 90 dias e Platinum 180 dias. As condições de pagamento são tratadas pelo WhatsApp.
 - Não foram inventados depoimentos, resultados, CRN, endereços ou promessas clínicas. Confirme os dados profissionais e as condições comerciais antes de qualquer publicação futura.
 
 ## Verificação
 
 Validar desktop e celular (360 px ou maior), menu móvel, navegação por teclado, âncoras, detalhes expansíveis das perguntas frequentes e destinos do WhatsApp/Instagram. O menu informa seu estado por `aria-expanded`; há link para pular ao conteúdo, foco visível e respeito a movimento reduzido.
-
-A tentativa inicial de instalação no ambiente restrito foi bloqueada com `EACCES` na conexão a `registry.npmjs.org`. Assim, o build e a verificação em navegador dependem da instalação bem-sucedida das dependências; não são apresentados como aprovados sem execução.
