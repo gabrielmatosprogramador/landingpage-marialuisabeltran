@@ -58,7 +58,15 @@ export class App {
       name: 'Silver',
       eyebrow: 'O primeiro passo',
       description: 'Para começar a cuidar da alimentação com orientação individualizada.',
-      features: ['30 dias de acompanhamento', 'Planejamento individualizado'],
+      features: [
+        '30 dias de acompanhamento',
+        'Plano alimentar personalizado',
+        'Avaliação da composição corporal',
+        'Materiais didáticos para auxiliar no dia a dia',
+        'Suporte diário pelo WhatsApp por 30 dias',
+        'Formulário de 45 dias de acompanhamento',
+        'Direito a 1 consulta'
+      ],
       price: 'R$ 320',
       price2027: 'R$ 350',
       pricePeriod: '/mês'
@@ -67,7 +75,16 @@ export class App {
       name: 'Gold',
       eyebrow: 'Continuidade no cuidado',
       description: 'Mais tempo para construir hábitos e acompanhar o seu processo.',
-      features: ['90 dias de acompanhamento', 'Planejamento individualizado'],
+      features: [
+        '90 dias de acompanhamento',
+        'Plano alimentar personalizado',
+        'Avaliação da composição corporal',
+        'Materiais didáticos para auxiliar no dia a dia',
+        'Suporte diário pelo WhatsApp por 90 dias',
+        'Formulário de 45 dias de acompanhamento',
+        'Direito a 1 consulta e 2 retornos em 90 dias',
+        '1 semana de planilha de treino online gratuita com profissional de educação física'
+      ],
       price: 'R$ 750',
       cashPrice: 'R$ 700',
       price2027: 'R$ 850',
@@ -77,7 +94,16 @@ export class App {
       name: 'Platinum',
       eyebrow: 'Uma jornada com você',
       description: 'Um acompanhamento mais longo para avançar com constância.',
-      features: ['180 dias de acompanhamento', 'Planejamento individualizado'],
+      features: [
+        '180 dias de acompanhamento',
+        'Plano alimentar personalizado',
+        'Avaliação da composição corporal',
+        'Materiais didáticos para auxiliar no dia a dia',
+        'Suporte diário pelo WhatsApp por 180 dias',
+        'Formulário de 45 dias de acompanhamento',
+        'Direito a 2 consultas por mês',
+        'Desconto com profissionais parceiros'
+      ],
       price: 'R$ 3.300',
       cashPrice: 'R$ 3.030',
       price2027: 'R$ 3.600',
