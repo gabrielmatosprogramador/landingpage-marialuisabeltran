@@ -5,12 +5,14 @@
   --muted: #515151;
   --green: #90c671;
   --green-deep: #294623;
-  --green-tint: #eaf4e3;
+  --green-heading: #436a31;
+  --green-tint: #e7f1e1;
   --lilac: #ceb2ec;
   --mauve: #af8abe;
   --purple: #572f72;
-  --lilac-tint: #f0e7f8;
-  --line: #d9d1dd;
+  --purple-heading: #795092;
+  --lilac-tint: #efe3f7;
+  --line: #ddcee6;
 }
 
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--surface);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--purple);outline-offset:4px;box-shadow:0 0 0 4px var(--paper)}::selection{background:var(--lilac)}img{display:block;max-width:100%}h1,h2,h3,p{margin-top:0}p{line-height:1.8}h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}button{cursor:pointer}section[id]{scroll-margin-top:28px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}

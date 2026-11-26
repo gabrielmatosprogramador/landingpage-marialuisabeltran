@@ -44,7 +44,8 @@ export class App {
     });
   }
   readonly menuOpen = signal(false);
-  readonly whatsapp = 'https://wa.me/5551996540402?text=' + encodeURIComponent('Olá, Maria Luísa! Gostaria de saber mais sobre o acompanhamento nutricional.');
+  private readonly whatsappUrl = 'https://wa.me/555196241598';
+  readonly whatsapp = this.whatsappUrl + '?text=' + encodeURIComponent('Olá, Maria Luísa! Gostaria de saber mais sobre o acompanhamento nutricional.');
   readonly instagram = 'https://www.instagram.com/marialuisabeltran.nutri/';
   readonly goals = [
     {number:'01',title:'Uma rotina mais saudável',description:'Construir hábitos alimentares possíveis, respeitando suas preferências e o seu dia a dia.'},
@@ -59,6 +60,7 @@ export class App {
       description: 'Para começar a cuidar da alimentação com orientação individualizada.',
       features: ['30 dias de acompanhamento', 'Planejamento individualizado'],
       price: 'R$ 320',
+      price2027: 'R$ 350',
       pricePeriod: '/mês'
     },
     {
@@ -67,7 +69,9 @@ export class App {
       description: 'Mais tempo para construir hábitos e acompanhar o seu processo.',
       features: ['90 dias de acompanhamento', 'Planejamento individualizado'],
       price: 'R$ 750',
-      cashPrice: 'R$ 700'
+      cashPrice: 'R$ 700',
+      price2027: 'R$ 850',
+      cashPrice2027: 'R$ 800'
     },
     {
       name: 'Platinum',
@@ -75,7 +79,9 @@ export class App {
       description: 'Um acompanhamento mais longo para avançar com constância.',
       features: ['180 dias de acompanhamento', 'Planejamento individualizado'],
       price: 'R$ 3.300',
-      cashPrice: 'R$ 3.030'
+      cashPrice: 'R$ 3.030',
+      price2027: 'R$ 3.600',
+      cashPrice2027: 'R$ 3.300'
     }
   ];
   readonly faqs = [
@@ -85,5 +91,5 @@ export class App {
     {question:'Como escolho o melhor plano?',answer:'Você pode conversar diretamente com a Maria Luísa sobre seus objetivos e sua rotina. Assim, vocês avaliam juntas ou juntos qual modalidade de acompanhamento faz mais sentido. Consulte as condições de pagamento pelo WhatsApp.'}
   ];
   closeMenu():void { this.menuOpen.set(false); }
-  planContact(name:string):string { return 'https://wa.me/5551996540402?text=' + encodeURIComponent(`Olá, Maria Luísa! Gostaria de saber mais sobre o plano ${name}.`); }
+  planContact(name:string):string { return this.whatsappUrl + '?text=' + encodeURIComponent(`Olá, Maria Luísa! Gostaria de saber mais sobre o plano ${name}.`); }
 }
